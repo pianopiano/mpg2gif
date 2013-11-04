@@ -1,0 +1,6 @@
+node_modules/*
+public/javascripts/jquery-ui-1.10.3.custom
+public/javascripts/jquery-ui-1.10.3.custom.min.js
+public/stylesheets/ui-lightness
+public/builds/*
+.DS_Store

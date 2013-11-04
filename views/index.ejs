@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/stylesheets/ui-lightness/jquery-ui-1.10.3.custom.min.css" />
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  	<div id="container">
+	    <h1><%= title %></h1>
+	    <p id="sub" style="border: 0; color: #f6931f;">Welcome to <%= title %></p>
+		<div id="content">
+			<p>Choose File<span style="font-size: 10px;">（ format mp4、mov、m4v )</span></p>
+			<form method="POST" enctype="multipart/form-data" action="/upload">
+				<input type="file" name="thumbnail" id="file" /><br />
+				<input type="submit" id="submit1" />
+			</form>
+		</div>
+		<p id="video"><%= videoPath %></p>
+		<p id="gif"><%= gifPath %></p>
+		<div id="build">
+			<p>Parameter</p>
+			<form method="POST" enctype="multipart/form-data" action="/build">
+				<div>start:<br /><input id="start" type="text" name="start" value="0" /></div>
+				<div>end:<br /><input id="end" type="text" name="end" value="0" /></div>
+				<div>sheet:<br /><input type="text" name="count" value="10" /></div>
+				<div>width:<br /><input type="text" name="width" value="320" /></div>
+				<div>height:<br /><input type="text" name="height" value="240" /><br /></div>
+				<input type="submit" id="submit2" />
+			</form>
+		</div>
+	</div>
+	
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/javascripts/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/javascripts/script.js"></script>
+  </body>
+</html>
